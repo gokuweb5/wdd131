@@ -1,30 +1,29 @@
 
+@media screen and (min-width: 768px) { 
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        margin-left: auto;
+    }
+    .navigation li {
+        margin-left: 1rem;
+    }
+
+    .navigation li a {
+        border: none; 
+        padding: 0.5rem 1rem;
+    }
 
 
-#menu {
-    display: none;
-}
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-
-.navigation {
-    display: flex; 
-    position: static; 
-    width: auto; 
-    background-color: transparent; 
-    margin-left: auto; 
-}
-
-
-.navigation li {
-    margin-left: 1rem;
-}
-
-.navigation li a {
-    border: none; 
-    padding: 0.5rem 1rem;
-}
-
-
-.gallery {
-    grid-template-columns: repeat(3, 1fr); 
-}
+} 

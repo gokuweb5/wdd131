@@ -1,5 +1,4 @@
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,6 +21,7 @@ header {
 }
 
 
+
 #menu {
     font-size: 2rem;
     color: white;
@@ -42,7 +42,10 @@ header {
     left: 0;
     z-index: 10;
 }
-
+nav {
+    display: flex; 
+    flex-direction: column; 
+}
 
 .navigation.open {
     display: block; 
@@ -101,3 +104,4 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
