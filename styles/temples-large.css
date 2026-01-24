@@ -1,0 +1,30 @@
+
+
+
+#menu {
+    display: none;
+}
+
+
+.navigation {
+    display: flex; 
+    position: static; 
+    width: auto; 
+    background-color: transparent; 
+    margin-left: auto; 
+}
+
+
+.navigation li {
+    margin-left: 1rem;
+}
+
+.navigation li a {
+    border: none; 
+    padding: 0.5rem 1rem;
+}
+
+
+.gallery {
+    grid-template-columns: repeat(3, 1fr); 
+}
