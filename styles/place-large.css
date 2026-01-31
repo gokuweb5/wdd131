@@ -1,6 +1,4 @@
-/* Large Screen Layout (min-width: 768px) */
 
-/* Header - Larger View */
 header h1 {
     font-size: 2.5rem;
     padding: 1.5rem;
@@ -68,7 +66,7 @@ dl {
     font-size: 0.95rem;
 }
 
-/* Footer adjustments */
+
 footer {
     font-size: 1rem;
 }

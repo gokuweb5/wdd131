@@ -20,7 +20,7 @@ function displayWindChill() {
 }
 
 function setFooterDates() {
-    // Current year
+    // Current year ...
     document.getElementById('currentyear').textContent = new Date().getFullYear();
     
     // Last modification
