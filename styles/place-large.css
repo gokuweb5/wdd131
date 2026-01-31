@@ -1,5 +1,5 @@
-
-header h1 {
+@media (min-width: 768px) {
+    header h1 {
     font-size: 2.5rem;
     padding: 1.5rem;
 }
@@ -40,22 +40,6 @@ main {
     align-self: start;
 }
 
-/* Weather pseudo-element for icon in large view */
-.weather h2::after {
-    content: '☀️';
-    margin-left: 0.5rem;
-}
-
-/* Hide the span icon in large view since we use pseudo-element */
-.weather h2 #weather-icon {
-    display: none;
-}
-
-/* Card adjustments for larger screens */
-.card {
-    padding: 1.5rem;
-}
-
 .card h2 {
     font-size: 1.3rem;
 }
@@ -67,10 +51,4 @@ dl {
 }
 
 
-footer {
-    font-size: 1rem;
-}
-
-footer p {
-    font-size: 1rem;
 }
