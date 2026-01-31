@@ -1,21 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 | Place| Luis Navarrete</title>
+    <title>El Salvador | WDD 131 | Luis Navarrete</title>
     <meta name="author" content="Luis Navarrete">
+    <meta name="description" content="Página sobre El Salvador - WDD 131 Dynamic Web Fundamentals">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css" media="screen and (min-width: 768px)">
     <script src="scripts/place.js" defer></script>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Luis Navarrete, Place">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
- 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>El Salvador</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/el-salvador-large.webp" media="(min-width: 768px)">
+                <img src="images/el-salvador-small.webp" alt="Vista panorámica de El Salvador" width="800" height="500">
+            </picture>
+        </section>
+
+        <section class="data card">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt>
+                <dd>21,041 sq km</dd>
+                <dt>Population:</dt>
+                <dd>6.3 Million</dd>
+                <dt>Capital:</dt>
+                <dd>San Salvador</dd>
+                <dt>Languages:</dt>
+                <dd>Spanish</dd>
+                <dt>Currency:</dt>
+                <dd>US Dollar / Bitcoin</dd>
+                <dt>Time Zone:</dt>
+                <dd>CST (UTC-6)</dd>
+                <dt>Calling Code:</dt>
+                <dd>+503</dd>
+                <dt>Internet TLD:</dt>
+                <dd>.sv</dd>
+            </dl>
+        </section>
+
+        <section class="weather card">
+            <h2>Weather <span id="weather-icon">☀️</span></h2>
+            <dl>
+                <dt>Temperature:</dt>
+                <dd><span id="temp">28</span>°C</dd>
+                <dt>Conditions:</dt>
+                <dd>Sunny</dd>
+                <dt>Wind:</dt>
+                <dd><span id="wind">10</span> km/h</dd>
+                <dt>Wind Chill:</dt>
+                <dd id="windchill">N/A</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+
+    <p>&copy;<span id="currentyear"></span> ⭐ Luis Navarrete ⭐ El Salvador</p>
+    <p id="lastModified"></p>
+
+    </footer>
 </body>
 </html>

@@ -1,0 +1,78 @@
+/* Large Screen Layout (min-width: 768px) */
+
+/* Header - Larger View */
+header h1 {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+}
+
+/* Main Grid Layout - Desktop */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Data Section - Left Column */
+.data {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: start;
+}
+
+/* Hero Section - Center */
+.hero {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin-bottom: 0;
+}
+
+.hero img {
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+/* Weather Section - Right Column */
+.weather {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+}
+
+/* Weather pseudo-element for icon in large view */
+.weather h2::after {
+    content: '☀️';
+    margin-left: 0.5rem;
+}
+
+/* Hide the span icon in large view since we use pseudo-element */
+.weather h2 #weather-icon {
+    display: none;
+}
+
+/* Card adjustments for larger screens */
+.card {
+    padding: 1.5rem;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+}
+
+/* Definition list adjustments */
+dl {
+    gap: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+/* Footer adjustments */
+footer {
+    font-size: 1rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
