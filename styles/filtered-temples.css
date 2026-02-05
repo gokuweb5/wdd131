@@ -1,0 +1,129 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.temple-card {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    /* Añade sombras y estilos aquí */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+header {
+    background-color: #4a004a; 
+    color: white;
+    padding: 1rem;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+}
+
+
+
+#menu {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+.navigation {
+    display: none; 
+    list-style: none;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+}
+nav {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.navigation.open {
+    display: block; 
+}
+
+.navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.navigation li a:hover {
+    background-color: #555; 
+}
+
+
+main h1 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el grid */
+}
+
+/* Esto hará que tanto los antiguos 'figure' como las nuevas 'section' se vean bien */
+.temple-card, figure {
+    margin: 0;
+    border: 1px solid #ccc;
+    background: #eee;
+    padding: 10px; /* Un poco de espacio interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temple-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #4a004a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
