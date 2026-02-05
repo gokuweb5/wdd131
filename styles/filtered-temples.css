@@ -71,7 +71,7 @@ nav {
     text-align: center;
     padding: 1rem;
     text-decoration: none;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid #444444;
 }
 
 .navigation li a:hover {
