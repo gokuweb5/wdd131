@@ -1,0 +1,24 @@
+
+@media screen and (min-width: 768px) { 
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        width: auto;
+        background-color: #00000000;
+        margin-left: auto;
+    }
+    .navigation li {
+        margin-left: 1rem;
+    }
+
+    .navigation li a {
+        border: none; 
+        padding: 0.5rem 1rem;
+    }
+
+} 
