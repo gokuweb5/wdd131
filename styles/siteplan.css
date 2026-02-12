@@ -1,0 +1,259 @@
+/* Roatán Air Connect - Site Plan Styles */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Lato:wght@400;700&display=swap');
+
+/* CSS Variables - Color Schema */
+:root {
+    --primary-color: #1B3A5C;       /* Navy Blue - trust, authority, aviation */
+    --primary-dark: #122840;        /* Dark Navy - hover states */
+    --secondary-color: #17A2B8;     /* Caribbean Turquoise - Roatán destination */
+    --secondary-light: #20C5DD;     /* Light Turquoise - hover, highlights */
+    --accent-color: #FF6600;        /* Safety Orange - CTA buttons, book now */
+    --accent-dark: #E05500;         /* Dark Orange - hover states */
+    --accent-white: #FFFFFF;        /* White - button text, visibility */
+    --background-color: #F5F5F5;    /* Light Gray - page background */
+    --surface-color: #FFFFFF;       /* White - card/section backgrounds */
+    --text-color: #333333;          /* Dark Gray - body text */
+    --text-light: #666666;          /* Medium Gray - secondary text */
+    --border-color: #E0E0E0;        /* Light border */
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Oswald', Arial, sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-top: 1.5em;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-light);
+    text-decoration: underline;
+}
+
+/* Layout */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    border-bottom-color: var(--accent-color);
+    font-size: 2rem;
+}
+
+header p {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+/* Sections */
+section {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Color Swatches */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-swatch {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.color-swatch .swatch-preview {
+    height: 80px;
+}
+
+.color-swatch .swatch-info {
+    padding: 0.5rem 0.75rem;
+    background: white;
+    font-size: 0.85rem;
+}
+
+.color-swatch .swatch-info strong {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+/* Typography Samples */
+.font-sample {
+    background: var(--background-color);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.font-sample .sample-heading {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.font-sample .sample-body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Scenarios */
+ul.scenarios {
+    list-style: none;
+    padding: 0;
+}
+
+ul.scenarios li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: var(--background-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 0 6px 6px 0;
+}
+
+ul.scenarios li::before {
+    content: "✈ ";
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Wireframe Images */
+.wireframes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.wireframe-box {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background: var(--background-color);
+}
+
+.wireframe-box h4 {
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+.wireframe-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Page Map */
+.page-map {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.page-card {
+    background: var(--background-color);
+    border-radius: 8px;
+    padding: 1rem;
+    border-top: 4px solid var(--accent-color);
+}
+
+.page-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+}
+
+.page-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wireframes {
+        grid-template-columns: 1fr;
+    }
+
+    .page-map {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
