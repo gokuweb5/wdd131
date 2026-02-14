@@ -193,7 +193,9 @@ textarea {
     color: var(--accent-color);
 }
 
-.stars input:checked ~ label::before {
+.stars input:checked ~ label::before,
+.stars label:hover ~ label::before,
+.stars label:hover::before {
     content: "\2605"; 
 }
 
