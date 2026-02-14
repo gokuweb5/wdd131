@@ -1,0 +1,312 @@
+:root {
+    --primary-color: #1B3A5C;
+    --primary-dark: #122840;
+    --secondary-color: #17A2B8;
+    --secondary-light: #20C5DD;
+    --accent-color: #FF6600;
+    --accent-dark: #E05500;
+    --background-color: #F5F5F5;
+    --surface-color: #FFFFFF;
+    --text-color: #333333;
+    --text-light: #666666;
+    --border-color: #E0E0E0;
+    --error-color: #DC3545;
+    --success-color: #28A745;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Oswald', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.2rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.2em;
+}
+
+header p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Form Card */
+.form-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-card h2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.form-card form {
+    padding: 1.5rem 2rem 2rem;
+}
+
+/* Form Fields */
+fieldset {
+    border: none;
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+label .required {
+    color: var(--error-color);
+    font-weight: 700;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: white;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    background-color: #f0fafb;
+}
+
+select:valid:not(:placeholder-shown),
+input[type="text"]:valid,
+input[type="date"]:valid {
+    background-color: #eef9ee;
+}
+
+select:invalid,
+input[type="date"]:invalid {
+    background-color: #fff0f3;
+    border-color: var(--error-color);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Star Rating */
+.stars-container {
+    margin: 0.5rem 0;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    color: var(--border-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.15s;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+    color: var(--accent-color);
+}
+
+.stars label::before {
+    content: "\2606";
+}
+
+.stars input:checked ~ label {
+    color: var(--accent-color);
+}
+
+.stars input:checked ~ label::before {
+    content: "\2605";
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.6rem;
+    accent-color: var(--secondary-color);
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-dark);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Review / Confirmation Page */
+.confirmation-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.confirmation-card h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.confirmation-card p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.confirmation-card .counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    font-family: 'Oswald', sans-serif;
+}
+
+.confirmation-card .back-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s;
+}
+
+.confirmation-card .back-link:hover {
+    background-color: var(--secondary-light);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .form-card form {
+        padding: 1rem 1.2rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+}

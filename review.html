@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Review Submitted | Luis Navarrete</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Luis Navarrete, Review Confirmation">
+    <meta name="author" content="Luis Navarrete">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Roatán Air Connect</h1>
+        <p>Product Review</p>
+    </header>
+
+    <main>
+        <div class="confirmation-card">
+            <h2>Thank You for Your Review!</h2>
+            <p>Your feedback has been submitted successfully.</p>
+            <p>Total Reviews Submitted:</p>
+            <div class="counter" id="review-counter">0</div>
+            <a href="form.html" class="back-link">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> ⭐ Luis Navarrete ⭐ El Salvador</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // Increment and display the review counter using localStorage
+        let reviewCount = localStorage.getItem("reviewCount");
+
+        if (reviewCount === null) {
+            reviewCount = 1;
+        } else {
+            reviewCount = parseInt(reviewCount) + 1;
+        }
+
+        localStorage.setItem("reviewCount", reviewCount);
+        document.getElementById("review-counter").textContent = reviewCount;
+    </script>
+</body>
+</html>

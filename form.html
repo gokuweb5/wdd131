@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Product Review Form | Luis Navarrete</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Luis Navarrete, Product Review Form">
+    <meta name="author" content="Luis Navarrete">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Roatán Air Connect</h1>
+        <p>Product Review</p>
+    </header>
+
+    <main>
+        <div class="form-card">
+            <h2>Product Review</h2>
+            <form method="get" action="review.html">
+
+                <!-- Product Name -->
+                <fieldset>
+                    <label for="product-name">Product Name <abbr title="required" aria-label="required" class="required">*</abbr></label>
+                    <select id="product-name" name="product-name" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </fieldset>
+
+                <!-- Overall Rating -->
+                <fieldset>
+                    <label>Overall Rating <abbr title="required" aria-label="required" class="required">*</abbr></label>
+                    <div class="stars-container">
+                        <div class="stars">
+                            <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4" required><label for="star4" title="4 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3" required><label for="star3" title="3 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2" required><label for="star2" title="2 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1" required><label for="star1" title="1 star"></label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Date of Installation -->
+                <fieldset>
+                    <label for="install-date">Date of Installation <abbr title="required" aria-label="required" class="required">*</abbr></label>
+                    <input type="date" id="install-date" name="install-date" required>
+                </fieldset>
+
+                <!-- Useful Features -->
+                <fieldset>
+                    <label>Which features did you find useful in the product? <em>(Check all that apply)</em></label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="durability" name="features" value="durability">
+                            Durability
+                        </label>
+                        <label>
+                            <input type="checkbox" id="ease" name="features" value="ease-of-use">
+                            Ease of Use
+                        </label>
+                        <label>
+                            <input type="checkbox" id="performance" name="features" value="performance">
+                            Performance
+                        </label>
+                        <label>
+                            <input type="checkbox" id="design" name="features" value="design">
+                            Design
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Written Review -->
+                <fieldset>
+                    <label for="review">Written Review <em>(Optional)</em></label>
+                    <textarea id="review" name="review" placeholder="Write your review here..."></textarea>
+                </fieldset>
+
+                <!-- User Name -->
+                <fieldset>
+                    <label for="user-name">Your Name <em>(Optional)</em></label>
+                    <input type="text" id="user-name" name="user-name" placeholder="Your name">
+                </fieldset>
+
+                <!-- Submit -->
+                <input type="submit" class="submit-btn" value="Post Review">
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> ⭐ Luis Navarrete ⭐ El Salvador</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
