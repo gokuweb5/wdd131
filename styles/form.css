@@ -168,9 +168,13 @@ textarea {
     cursor: pointer;
     transition: color 0.15s;
     display: inline-block;
-    width: auto;
+    width: 40px;      
     margin-bottom: 0;
+    overflow: hidden;  
+    white-space: nowrap;
+    text-indent: 100%; 
 }
+
 
 .stars label:hover,
 .stars label:hover ~ label {
@@ -178,7 +182,9 @@ textarea {
 }
 
 .stars label::before {
-    content: "\2606";
+    content: "\2606"; 
+    float: left;      
+    text-indent: 0;  
 }
 
 .stars input:checked ~ label {
