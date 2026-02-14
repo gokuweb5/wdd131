@@ -196,25 +196,23 @@ textarea {
 }
 
 /* Checkboxes */
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.4rem;
-}
-
-.checkbox-group label {
+.check-item {
     display: flex;
     align-items: center;
-    font-weight: 400;
-    color: var(--text-color);
-    cursor: pointer;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
-.checkbox-group input[type="checkbox"] {
+.check-item label {
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 0; 
+}
+
+
+.check-item input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    margin-right: 0.6rem;
     accent-color: var(--secondary-color);
 }
 
