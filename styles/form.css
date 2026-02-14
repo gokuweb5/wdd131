@@ -153,7 +153,7 @@ textarea {
 
 .stars {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; 
     justify-content: flex-end;
     gap: 4px;
 }
@@ -178,7 +178,7 @@ textarea {
 }
 
 .stars label::before {
-    content: "\2606";    
+    content: "\2606"; 
     position: absolute;
     left: 0;
     top: 0;
@@ -187,12 +187,14 @@ textarea {
     text-align: center;
 }
 
-.stars input:checked ~ label {
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
     color: var(--accent-color);
 }
 
 .stars input:checked ~ label::before {
-    content: "\2605";
+    content: "\2605"; 
 }
 
 /* Checkboxes */
