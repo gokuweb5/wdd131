@@ -305,24 +305,6 @@ footer a:hover {
 }
 
 
-.check-item {
-    display: flex;
-    align-items: center; 
-    gap: 10px;           
-    margin-bottom: 8px;  
-}
-
-.check-item input[type="checkbox"] {
-    margin: 0;           
-    width: 20px;
-    height: 20px;
-}
-
-.check-item label {
-    font-weight: 400;    
-    margin-bottom: 0;    
-}
-
 @media (max-width: 640px) {
     .form-card form {
         padding: 1rem 1.2rem 1.5rem;
