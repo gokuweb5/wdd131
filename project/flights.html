@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Flight Schedule | Luis Navarrete</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Luis Navarrete, Roatán Air Connect Flight Schedule">
+    <meta name="author" content="Luis Navarrete">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/flights.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-roatan.png" alt="Roatán Air Connect Logo">
+                <span>Roatán Air Connect</span>
+            </a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html" class="active">Flights</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="flights-header">
+        <h1>Flight Schedule</h1>
+        <p>Dynamic routes optimized for maximum occupancy aboard our Cessna Grand Caravan</p>
+    </section>
+
+    <section class="section">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; align-items: center;">
+            <label for="filter-origin" style="font-weight:700; color: var(--primary-color);">Filter by Origin:</label>
+            <select id="filter-origin" style="padding: 0.5rem 1rem; border: 2px solid var(--border-color); border-radius: 6px; font-family: 'Lato', sans-serif; font-size: 0.95rem;">
+                <option value="all">All Routes</option>
+                <option value="SAL">San Salvador (SAL)</option>
+                <option value="RTB">Roatán (RTB)</option>
+            </select>
+        </div>
+
+        <div id="flights-container">
+            <p class="no-flights">Loading flights...</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> ⭐ Luis Navarrete ⭐ El Salvador</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
